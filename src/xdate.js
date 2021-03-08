@@ -583,7 +583,9 @@ function getTokenReplacement(xdate, token, getField, getSetting, useUTC) {
 		case 'MMM'  : return getSetting('monthNamesShort')[getField(MONTH)] || '';
 		case 'MMMM' : return getSetting('monthNames')[getField(MONTH)] || '';
 		case 'yy'   : return (getField(FULLYEAR)+'').substring(2);
+		case 'YY'   : return ((getField(FULLYEAR)+543)+'').substring(2);
 		case 'yyyy' : return getField(FULLYEAR);
+		case 'YYYY' : return getField(FULLYEAR)+543;
 		case 't'    : return _getDesignator(getField, getSetting).substr(0, 1).toLowerCase();
 		case 'tt'   : return _getDesignator(getField, getSetting).toLowerCase();
 		case 'T'    : return _getDesignator(getField, getSetting).substr(0, 1);
